@@ -416,7 +416,6 @@ body {
 	background-color: rgba(255, 203, 1, 0.21);
 }
 
-/* CUSTOM MEDIA QUERIES */
 #myCarousel .item { height: 500px; }
 #slide0 {
 	background: url('../img/slide0_medium.jpg') top left no-repeat;
@@ -434,7 +433,17 @@ body {
 	background: url('../img/slide3_medium.jpg') top left no-repeat;
 }
 
+
+/* CUSTOM MEDIA QUERIES */
+
 @media (max-width: 767px) {
+	 .content-section {
+        padding-top: 50px;
+    }
+
+    .download-section {
+        padding: 50px 0;
+    }
 	.navbar-custom {
 		border-bottom: none;
 		background-color: transparent;
@@ -458,7 +467,10 @@ body {
 	#slide3 {
         background: url('../img/slide3_small.jpg') top left no-repeat;
     }
+	
 }
+
+
 
 /* Large desktop */
 @media (min-width: 1200px) {
