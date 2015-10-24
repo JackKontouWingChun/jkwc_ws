@@ -274,9 +274,13 @@ a:focus {
     -o-background-size: cover;
 }
 #jkwc {
-	height:200px;
+	height:300px;
 	width:100%;
-	margin-top: 150px;
+	margin-top: 50px;
+}
+
+.gm-style-cc{
+	display: none;
 }
 .gm-style-iw * {
 	display: block;
@@ -289,11 +293,6 @@ a:focus {
 .gm-style-iw a {
 	color: #4272db;
 }
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 150px;
-}
 
 @media(min-width:767px) {
     .content-section {
@@ -302,11 +301,6 @@ a:focus {
 
     .download-section {
         padding: 150px 0;
-    }
-
-    #map {
-        height: 400px;
-        margin-top: 150px;
     }
 	#jkwc {
 		height: 400px;
@@ -325,7 +319,7 @@ a:focus {
 }
 
 .btn-default {
-    border: none;
+    border: 1px solid #FFCB01;
     color: #FFCB01;
     background-color: transparent;
 }
@@ -339,7 +333,6 @@ a:focus {
 }
 
 #contact .btn-default {
-    border: 1px solid #FFCB01;
     color: #FFCB01;
     background-color: transparent;
 }
@@ -355,17 +348,36 @@ a:focus {
 ul.banner-social-buttons {
 	margin-top: 0;
 }
+ul.banner-social-buttons i {
+    width: 40px;
+    height: 40px;
+    color: #FFCB01;
+	border: 1px solid #FFCB01;
+    background-color: #000;
+    font-size: 22px;
+    text-align:center;
+    padding-top: 12px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+}
 
 @media(max-width:1199px) {
     ul.banner-social-buttons {
-        margin-top: 15px;
+        margin-top: 0px;
     }
 }
 
 @media(max-width:767px) {
     ul.banner-social-buttons li {
         margin-bottom: 20px;
-        padding: 0;
+        padding: 5px;
     }
 
     ul.banner-social-buttons li:last-child {
@@ -435,11 +447,7 @@ body {
 
 
 /* CUSTOM MEDIA QUERIES */
-/*@media (max-width:320px){
-	.intro{
-		background-position-x: 30%;
-	}
-}*/
+
 @media (max-width: 767px) {
 	.intro{
 		background-position-x: 30%;
