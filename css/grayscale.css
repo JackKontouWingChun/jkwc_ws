@@ -435,12 +435,15 @@ body {
 
 
 /* CUSTOM MEDIA QUERIES */
-@media (max-width:320px){
+/*@media (max-width:320px){
 	.intro{
 		background-position-x: 30%;
 	}
-}
+}*/
 @media (max-width: 767px) {
+	.intro{
+		background-position-x: 30%;
+	}
 	 .content-section {
         padding-top: 50px;
     }
