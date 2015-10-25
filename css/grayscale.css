@@ -320,8 +320,9 @@ a:focus {
 
 .btn-default {
     border: 1px solid #FFCB01;
-    color: #FFCB01;
-    background-color: transparent;
+	border-radius: 15px;
+    color: #000;
+    background-color: #FFCB01;
 }
 
 .btn-default:hover,
