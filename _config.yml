@@ -1,0 +1,11 @@
+# Site settings
+title: JKWC - Jack Kontou Wing Chun
+email: info@jkwc.co.uk
+description:
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://jkwc.co.uk" # the base hostname & protocol for your site
+twitter_username: Jack_Kontou
+
+# Build settings
+markdown: kramdown
+highlighter: rouge

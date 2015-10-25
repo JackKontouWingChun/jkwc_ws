@@ -1,6 +1,7 @@
 _site/
 .sass-cache/
 *.xcf
+*.bat
 
 # OS generated files #
 ######################

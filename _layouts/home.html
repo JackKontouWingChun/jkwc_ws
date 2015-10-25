@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    {% include navbar.html %}
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                     <div class="col-md-4"></div>
+					<div class="col-md-8" style="text-align: right;">
+                        <h1 class="brand-heading" >Jack Kontou <span style="color:#FFCB01">Wing Chun</span></h1>
+                        <p class="intro-text">"The more you sweat in peace, the less you bleed in war"<br/><small>- George S. Patton</small></p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+	{{ content }}
+	
+    <!-- Footer -->
+   {% include footer.html %}
+
+</body>
+
+</html>
