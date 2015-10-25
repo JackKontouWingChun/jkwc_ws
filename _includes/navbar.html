@@ -14,7 +14,7 @@
 					<a href="#page-top"></a>
 				</li>
 				<li>
-					<a class="page-scroll" href="#posts">News</a>
+					<a class="page-scroll" href="{% if page.url == '/index.html' %}#post{% else %}{{ '#posst' | prepend: site.baseurl }}{% endif %}">News</a>
 				</li>
 				<li>
 					<a class="page-scroll" href="#contact">Contact</a>
