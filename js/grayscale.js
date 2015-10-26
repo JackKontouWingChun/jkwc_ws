@@ -147,7 +147,6 @@ function init() {
 			iw = new google.maps.InfoWindow({content:html, maxWidth: 305});
 			iw.open(map,marker);
 			infoWindowVisible(true);
-              map.setCenter(marker.getPosition());
 			}
 		});
 		google.maps.event.addListener(iw, 'closeclick', function () {
