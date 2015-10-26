@@ -96,8 +96,10 @@ function init() {
 				'undefined',
 				'undefined',
 				'undefined',
-				51.508412, 
-				-0.269422,
+				//.51.508412, 
+				//-0.269422,
+                51.507273,
+                -0.269545
 				'https://mapbuildr.com/assets/img/markers/solid-pin-yellow.png'
 			]
         ];
