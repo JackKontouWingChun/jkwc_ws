@@ -148,6 +148,7 @@ function init() {
 			iw.open(map,marker);
 			infoWindowVisible(true);
 			}
+          map.setCenter(marker.getPosition());
 		});
 		google.maps.event.addListener(iw, 'closeclick', function () {
 			infoWindowVisible(false);
