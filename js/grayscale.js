@@ -124,7 +124,7 @@ function init() {
 			}
             bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
         }
-  google.maps.event.trigger(marker,'click',{});
+  //google.maps.event.trigger(marker,'click',{});
 	function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
 		var infoWindowVisible = (function () {
 			var currentlyVisible = false;
