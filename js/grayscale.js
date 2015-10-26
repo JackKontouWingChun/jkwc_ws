@@ -91,7 +91,7 @@ function init() {
         var mapElement = document.getElementById('jkwc');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-			[	'Jack Kontou Wing Chun',
+			[	'Jack Kontou<br />Wing Chun',
 				'108 Churchfield Road,<br/>Acton,<br>W3 6BY',
 				'undefined',
 				'undefined',
