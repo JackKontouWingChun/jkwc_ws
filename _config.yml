@@ -22,6 +22,8 @@ prose:
     - _config.yml
     - /_layouts
     - /_includes
+    - /fonts
+    - /font-awesome
   metadata:
     _posts:
       - name: "published"
