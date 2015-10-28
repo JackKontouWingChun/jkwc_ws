@@ -495,10 +495,10 @@ body {
     }
 	.navbar-custom {
 		border-bottom: none;
-		background-color: transparent;
+		background-color: rgba(0, 0, 0, 0.67);
 	}
 	.navbar-collapse{
-		background-color: rgba(153, 153, 153, 0.67);
+		background-color: rgba(40, 40, 40, 0.67);
 	}
 	#myCarousel .item { height: 310px; }
 	#slide0 {
