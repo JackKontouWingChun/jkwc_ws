@@ -1,7 +1,8 @@
 ---
 layout: post
 published: true
-category: null
+category: 
+  - youtube
 title: "JKWC Demo - Chinese New Year 2013"
 ---
 
