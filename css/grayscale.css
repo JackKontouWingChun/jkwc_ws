@@ -57,7 +57,16 @@ a:focus {
     text-decoration: none;
     color: #FFFE01;
 }
+/*
+a.post-link{
+	color: #8A7832;
+}
 
+a.post-link:hover,
+a.post-link:focus{
+	color: #FFCB01;
+}
+*/
 .light {
     font-weight: 400;
 }
@@ -431,11 +440,12 @@ body {
 .post-list li{
 	margin-bottom: 20px;
 }
-.post-list h2, h3{
+.post-list h2, h3, h4{
 	margin: 0 0 5px;
 }
 
 /* CUSTOMISED */
+
 .navbar-custom .nav li a{
 	color: #FFF;
 }
