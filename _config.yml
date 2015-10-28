@@ -5,7 +5,7 @@ description:
 baseurl: "/jkwc_ws" # the subpath of your site, e.g. /blog/
 url: "http://jkwc.co.uk" # the base hostname & protocol for your site
 twitter_username: Jack_Kontou
-paginate: 2
+paginate: 10
 
 # Build settings
 markdown: kramdown
