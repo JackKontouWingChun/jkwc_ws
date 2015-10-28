@@ -12,7 +12,6 @@ highlighter: rouge
 
 # prose.io  settings
 prose:
-  rooturl: _
   siteurl: "http://jackkontouwingchun.github.io/"
   media: "img"
   ignore:
