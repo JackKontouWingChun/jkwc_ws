@@ -23,6 +23,12 @@ prose:
     - /_includes
     - /fonts
     - /font-awesome
+    - /js/bootstrap.js
+    - /js/bootstrap.min.js
+    - /js/jquery.js
+    - /js/jquery.easing.min.js
+    - /css/bootstrap.css
+    - /css/bootstrap.min.css
   metadata:
     _posts:
       - name: "published"
@@ -33,10 +39,23 @@ prose:
       - name: "layout"
         field:
           label: "Layout"
-          element: "text"
+          element: "hidden"
           value: "post"
       - name: "title"
         field:
           label: "Title"
           element: "text"
-          value: "A awesome Headline!"
+          placeholder: "A awesome Headline!"
+      - name: "category"
+        field:
+          element: "multiselect"
+          label: "Choose Categories"
+          placeholder: "Choose Tags"
+          alterable: true
+          options:
+            - name: "Text"
+              value: "text"
+            - name: "YouTube"
+              value: "youtube"
+            - name: "News"
+              value: "news"
