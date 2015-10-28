@@ -1,8 +1,11 @@
 ---
-published: true
 layout: post
+published: true
 title: "Wan Kam Leung's seminar"
+category: 
+  - text
 ---
+
 
 Had a great day with my son (Jake Kontou), students and my Si Hing, Sifu Michael Street at Grandmaster Wan Kam Leung's seminar on the 23rd. 
 Big thanks to Sifu Gary Mckenzie (Sifu Abdul Malik) for organising the event. 
