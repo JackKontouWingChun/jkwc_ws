@@ -48,7 +48,7 @@ published: true
 								{% if post.category == 'youtube' %}
 								<a class="post-link" href="{{ post.url }}"><img alt="Image for {{ post.title }}" src="https://i.ytimg.com/vi/{{ post.thumbnail }}/maxresdefault.jpg"></a>
 								{% else %}
-								<a class="post-link" href="{{ post.url }}"><img alt="Image for {{ post.title }}" src="{{ post.thumbnail }}"></a>
+								<a class="post-link" href="{{ post.url }}"><img alt="Image for {{ post.title }}" src="{{ site.baseurl }}{{ post.thumbnail }}"></a>
 								{% endif %}
 							</div>
 							<div class="col-sm-8 text-left">
