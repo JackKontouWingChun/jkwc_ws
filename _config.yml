@@ -9,3 +9,32 @@ twitter_username: Jack_Kontou
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# prose.io  settings
+prose:
+  siteurl: "http://jackkontouwingchun.github.io/"
+  media: "img"
+  ignore:
+    - .gitignore
+    - Gemfile
+    - Gemfile.lock
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          label: "Published"
+          element: "checkbox"
+          value: "true"
+      - name: "layout"
+        field:
+          label: "Layout"
+          element: "text"
+          value: "post"
+      - name: "title"
+        field:
+          label: "Title"
+          element: "text"
+          value: "A awesome Headline!"
