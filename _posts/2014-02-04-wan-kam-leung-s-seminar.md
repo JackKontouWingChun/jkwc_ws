@@ -4,9 +4,6 @@ published: true
 title: "Wan Kam Leung's seminar"
 category: text
 thumbnail: /img/posts/wan_kam_leung.jpg
-orientation: landscape
-"focal-v": "down-6"
-"focal-h": "right-3"
 ---
 
 

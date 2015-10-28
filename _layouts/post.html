@@ -21,7 +21,7 @@ layout: default
 			{% for post in site.posts %}
 				<li>
 					<h5>
-						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}{% if post.category == 'youtube' %} <span class="fa fa-lg fa-youtube"></span> {% endif %}</a>
+						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 					</h5>
 					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 				</li>

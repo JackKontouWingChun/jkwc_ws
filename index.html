@@ -38,13 +38,25 @@ published: true
 			<h2>Latest news</h2>
 			<div style="margin-top:30px;">
 				<div class="col-sm-8 text-left">
-					{% assign post = paginator.posts.first %}
-					<h3>
-						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}{% if post.category == 'youtube' %} <span class="fa fa-lg fa-youtube"></span> {% endif %}</a>
-					</h3>
-					<span class="post-list post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-					<p> {{ post.content | truncatewords:50}}<br>
-					<a class="post-link" href="{{ post.url }}">Read more...</a><br><br></p>
+					{% for post in paginator.posts limit:2 %}
+						<h3>
+							<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}{% if post.category == 'youtube' %} <span class="fa fa-lg fa-youtube"></span> {% endif %}</a>
+						</h3>
+						<span class="post-list post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+						<div class="row">
+							<div class="col-sm-3  text-left">
+								{% if post.category == 'youtube' %}
+								<a class="post-link" href="{{ post.url }}"><img alt="Image for {{ post.title }}" src="https://i.ytimg.com/vi/{{ post.thumbnail }}/maxresdefault.jpg"></a>
+								{% else %}
+								<a class="post-link" href="{{ post.url }}"><img alt="Image for {{ post.title }}" src="{{ post.thumbnail }}"></a>
+								{% endif %}
+							</div>
+							<div class="col-sm-8 text-left">
+								<p> {{ post.content | strip_html | truncatewords:50}}<br>
+								<a class="post-link" href="{{ post.url }}">Read more...</a><br><br></p>
+							</div>
+						</div>
+					{% endfor %}
 				</div>
 				<div class="col-sm-4 text-right">
 					<h4>Previous Posts</h4>
