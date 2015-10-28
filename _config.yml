@@ -47,6 +47,11 @@ prose:
           label: "Title"
           element: "text"
           placeholder: "A awesome Headline!"
+      - name: "thumbnail"
+        field:
+          label: "Thumbnail"
+          element: "text"
+          placeholder: ""
       - name: "category"
         field:
           element: "select"
