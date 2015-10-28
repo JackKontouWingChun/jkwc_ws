@@ -444,7 +444,9 @@ body {
 }
 
 /* CUSTOMISED */
-
+img{
+	max-width: 100%;
+}
 .navbar-custom .nav li a{
 	color: #FFF;
 }
