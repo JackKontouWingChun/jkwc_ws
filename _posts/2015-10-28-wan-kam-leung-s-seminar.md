@@ -4,7 +4,6 @@ layout: post
 title: "Wan Kam Leung's seminar"
 ---
 
-
 Had a great day with my son (Jake Kontou), students and my Si Hing, Sifu Michael Street at Grandmaster Wan Kam Leung's seminar on the 23rd. 
 Big thanks to Sifu Gary Mckenzie (Sifu Abdul Malik) for organising the event. 
 Good to meet Sifu James Sinclair and Sifu Mark Phillips. Also was great catching up with my Kung Fu brothers which I haven't seen in many years.
