@@ -49,9 +49,9 @@ prose:
           placeholder: "A awesome Headline!"
       - name: "category"
         field:
-          element: "multiselect"
-          label: "Choose Categories"
-          placeholder: "Choose Tags"
+          element: "select"
+          label: "Choose category"
+          placeholder: "Choose category"
           alterable: true
           options:
             - name: "Text"

@@ -2,8 +2,7 @@
 layout: post
 published: true
 title: "Wan Kam Leung's seminar"
-category: 
-  - text
+category: text
 ---
 
 

@@ -1,8 +1,7 @@
 ---
 layout: post
 published: true
-category: 
-  - youtube
+category: youtube
 title: Latest Chi Sao video uploaded to our YouTube channel
 ---
 

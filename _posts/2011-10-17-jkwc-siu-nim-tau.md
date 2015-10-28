@@ -1,9 +1,8 @@
 ---
 layout: post
 published: true
-category: 
-  - youtube
 title: "JKWC - Siu nim tau"
+category: youtube
 ---
 
 
