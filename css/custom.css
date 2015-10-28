@@ -139,7 +139,7 @@ a.post-link:focus{
     .navbar-custom.top-nav-collapse {
         padding: 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
+        background: rgba(0, 0, 0, 0.67);
     }
 }
 
