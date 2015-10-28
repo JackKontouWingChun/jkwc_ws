@@ -11,4 +11,4 @@ Here's a short teaser clip of Sifu Jack Kontou demonstrating Chi Sao with studen
 
 To keep updated, [Subscribe to our YouTube channel by clicking here](http://www.youtube.com/subscription_center?add_user=JackKontou)
 
-<iframe width="100%" height="auto" src="https://www.youtube.com/embed/njDz36nBY9k?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="315px" src="https://www.youtube.com/embed/njDz36nBY9k?rel=0" frameborder="0" allowfullscreen></iframe>
