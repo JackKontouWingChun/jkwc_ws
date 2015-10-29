@@ -467,7 +467,7 @@ img{
 	background: url('../img/slide3_medium.jpg') top left no-repeat;
 }
 
-#prev-post-link{
+.prev-post-link{
   text-align: right;
 }
 /* MIMIC BOOTSRAP CONTAINER BUT WITHOUT THE WIDTH: */
@@ -515,7 +515,7 @@ img{
 	#slide3 {
         background: url('../img/slide3_small.jpg') top left no-repeat;
     }
-	#prev-post-link{
+	.prev-post-link{
   text-align:left;
   }
 }
