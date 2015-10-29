@@ -47,14 +47,14 @@ published: true
 						<div class="row">
 							<div class="col-sm-3  text-left">
 								{% if post.category == 'youtube' %}
-								<a class="post-link" href="{{ post.url }}"><img alt="Image for {{ post.title }}" src="https://i.ytimg.com/vi/{{ post.thumbnail }}/maxresdefault.jpg"></a>
+                              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><img alt="Image for {{ post.title }}" src="https://i.ytimg.com/vi/{{ post.thumbnail }}/maxresdefault.jpg"></a>
 								{% else %}
-								<a class="post-link" href="{{ post.url }}"><img alt="Image for {{ post.title }}" src="{{ site.baseurl }}{{ post.thumbnail }}"></a>
+                              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><img alt="Image for {{ post.title }}" src="{{ site.baseurl }}{{ post.thumbnail }}"></a>
 								{% endif %}
 							</div>
 							<div class="col-sm-8 text-left">
 								<p> {{ post.content | strip_html | truncatewords:50}}<br>
-								<a class="post-link" href="{{ post.url }}">Read more...</a><br><br></p>
+                                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more...</a><br><br></p>
 							</div>
 						</div>
 					{% endfor %}
