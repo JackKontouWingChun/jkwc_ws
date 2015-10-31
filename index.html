@@ -3,6 +3,7 @@ layout: home
 published: true
 ---
 
+
 <!DOCTYPE html>
 <!-- Contact Section -->
 <section id="contact" class="container content-section text-center">
@@ -47,6 +48,7 @@ published: true
 							<span class="post-list post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 							<a class="post-link" href="{{ post.url }}">
 								{% if post.category == 'youtube' %}
+<<<<<<< HEAD
 								<div class="img-circular" style="background-image: url('https://i.ytimg.com/vi/{{ post.thumbnail }}/maxresdefault.jpg');"></div>
 								{% else %}
 								<div class="img-circular" style="background-image: url('{{ post.thumbnail }}');"></div>							
@@ -57,6 +59,35 @@ published: true
 					</div>
 					{% endfor %}
 				</div>
+=======
+                              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><img alt="Image for {{ post.title }}" src="https://i.ytimg.com/vi/{{ post.thumbnail }}/maxresdefault.jpg"></a>
+								{% else %}
+                              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><img alt="Image for {{ post.title }}" src="{{ site.baseurl }}{{ post.thumbnail }}"></a>
+								{% endif %}
+							</div>
+							<div class="col-sm-8 text-left">
+								<p> {{ post.content | strip_html | truncatewords:50}}<br>
+                                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more...</a><br><br></p>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="col-sm-4 prev-post-list">
+					<h4>Previous Posts</h4>
+					<ul class="post-list">
+					{% for post in paginator.posts limit:10 %}
+						{% if forloop.first != true %}
+						<li>
+							<h5>
+								<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}{% if post.category == 'youtube' %} <span class="fa fa-lg fa-youtube"></span> {% endif %}</a>
+							</h5>
+							<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+						</li>
+						{% endif %}
+					{% endfor %}
+					</ul>
+				</div>
+>>>>>>> origin/gh-pages
 			</div>
 	</div>
 </section>
