@@ -47,7 +47,7 @@ published: true
 									{% if post.thumbnail %}
 									<div class="img-circular" style="background-image: url('{{ post.thumbnail | prepend: site.baseurl }}');"></div>
 									{% else %}<!--- TODO replace this with a reference to a placeholder clip --->
-									<div class="img-circular" style="background-image: url('{{ prepend: site.baseurl }}/img/logo.png');"></div>
+									<div class="img-circular" style="background-image: url('{{ site.baseurl }}/img/logo.png');"></div>
 									{% endif %}
 								{% endif %}
 								<h5>
