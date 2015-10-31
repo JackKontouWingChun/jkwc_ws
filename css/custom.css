@@ -441,6 +441,18 @@ body {
 img{
 	max-width: 100%;
 }
+.img-circular{
+	width: 200px;
+	height: 200px;
+	background-size: cover;
+	display: block;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	background-position: 50%;
+	margin: 20px auto;
+}
+
 .navbar-custom .nav li a{
 	color: #FFF;
 }
