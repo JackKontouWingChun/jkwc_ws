@@ -451,6 +451,10 @@ img{
 	-moz-border-radius: 100px;
 	background-position: 50%;
 	margin: 20px auto;
+	
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
 
 .navbar-custom .nav li a{
