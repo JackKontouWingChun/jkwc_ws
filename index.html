@@ -35,22 +35,25 @@ published: true
 <section id="posts" class="container content-section text-center">
 	<div class="row">
 		<div>
-			<h2>Latest news</h2>
+			<h2>Posts</h2>
 			<div style="margin-top:30px;">
 				<div class="row">
-					{% for post in paginator.posts limit:3 %}
+					{% for post in paginator.posts limit:6 %}
 					<div class="col-sm-4 feature">
-							<h4>
-								<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-							</h4>
-							<span class="post-list post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 							<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
 								{% if post.category == 'youtube' %}
-								<div class="img-circular" style="background-image: url('https://i.ytimg.com/vi/{{ post.thumbnail }}/maxresdefault.jpg');"></div>
+								<div class="img-circular" style="background-image: url('http://img.youtube.com/vi/{{ post.thumbnail }}/{% if post.res %}{{ post.res }}{% else %}maxres{% endif %}default.jpg');"></div>
 								{% else %}
-								<div class="img-circular" style="background-image: url('{{ post.thumbnail | prepend: site.baseurl }}');"></div>							
+									{% if post.thumbnail %}
+									<div class="img-circular" style="background-image: url('{{ post.thumbnail | prepend: site.baseurl }}');"></div>
+									{% else %}<!--- TODO replace this with a reference to a placeholder clip --->
+									<div class="img-circular" style="background-image: url('{{ prepend: site.baseurl }}/img/logo.png');"></div>
+									{% endif %}
 								{% endif %}
-								<p> {{ post.content | strip_html | truncatewords:20}}</p>
+								<h5>
+									<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+								</h5>
+								<span class="post-list post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 							</a>
 							
 					</div>

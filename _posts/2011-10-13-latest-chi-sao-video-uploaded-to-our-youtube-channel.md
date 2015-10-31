@@ -4,6 +4,7 @@ published: true
 category: youtube
 title: Latest Chi Sao video uploaded to our YouTube channel
 thumbnail: njDz36nBY9k
+res: hq
 ---
 
 

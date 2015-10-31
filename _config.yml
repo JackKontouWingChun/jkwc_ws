@@ -52,27 +52,6 @@ prose:
           label: "Thumbnail"
           element: "text"
           placeholder: ""
-      - name: "orientation"
-        field:
-          label: "Thumbnail"
-          element: "select"
-          placeholder: ""
-          alterable: true
-          options:
-            - name: "Portrait"
-              value: "portrait"
-            - name: "Landscape"
-              value: "landscape"
-      - name: "focal-v"
-        field:
-          label: "Focal-V"
-          element: "text"
-          placeholder: ""
-      - name: "focal-h"
-        field:
-          label: "Focal-H"
-          element: "text"
-          placeholder: ""
       - name: "category"
         field:
           element: "select"
