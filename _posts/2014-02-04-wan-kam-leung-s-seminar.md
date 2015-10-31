@@ -4,7 +4,6 @@ published: true
 title: "Wan Kam Leung's seminar"
 category: text
 thumbnail: /img/posts/wan_kam_leung.jpg
-res: hq
 ---
 
 

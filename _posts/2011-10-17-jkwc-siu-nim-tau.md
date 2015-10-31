@@ -4,6 +4,7 @@ published: true
 title: "JKWC - Siu nim tau"
 category: youtube
 thumbnail: 9ur39o3HdBk
+res: hq
 ---
 
 
