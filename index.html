@@ -33,33 +33,32 @@ published: true
 
 <!-- Posts Section -->
 <section id="posts" class="container content-section text-center">
-	<div class="row">
-		<div>
-			<h2>Posts</h2>
-			<div style="margin-top:30px;">
-				<div class="row">
-					{% for post in paginator.posts limit:6 %}
-					<div class="col-sm-4 feature">
-							<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-								{% if post.category == 'youtube' %}
-								<div class="img-circular" style="background-image: url('http://img.youtube.com/vi/{{ post.thumbnail }}/{% if post.res %}{{ post.res }}{% else %}maxres{% endif %}default.jpg');"></div>
-								{% else %}
-									{% if post.thumbnail %}
-									<div class="img-circular" style="background-image: url('{{ post.thumbnail | prepend: site.baseurl }}');"></div>
-									{% else %}<!--- TODO replace this with a reference to a placeholder clip --->
-									<div class="img-circular" style="background-image: url('{{ site.baseurl }}/img/logo.png');"></div>
-									{% endif %}
+	<div>
+		<h2>Posts</h2>
+		<div style="margin-top:30px;">
+			<div class="row">
+				{% for post in paginator.posts limit:6 %}
+				<div class="col-sm-4 feature">
+						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+							{% if post.category == 'youtube' %}
+							<div class="img-circular" style="background-image: url('http://img.youtube.com/vi/{{ post.thumbnail }}/{% if post.res %}{{ post.res }}{% else %}maxres{% endif %}default.jpg');"></div>
+							{% else %}
+								{% if post.thumbnail %}
+								<div class="img-circular" style="background-image: url('{{ post.thumbnail | prepend: site.baseurl }}');"></div>
+								{% else %}<!--- TODO replace this with a reference to a placeholder clip --->
+								<div class="img-circular" style="background-image: url('{{ site.baseurl }}/img/logo.png');"></div>
 								{% endif %}
-								<h5>
-									<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-								</h5>
-								<span class="post-list post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-							</a>
-							
-					</div>
-					{% endfor %}
+							{% endif %}
+							<h5>
+								<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+							</h5>
+							<span class="post-list post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+						</a>
+						
 				</div>
+				{% endfor %}
 			</div>
+		</div>
 	</div>
 </section>
 
