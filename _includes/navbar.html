@@ -15,19 +15,19 @@
 					<a href="#page-top"></a>
 				</li>
 				<li>
-					<a class="page-scroll" href="{% if page.url == '/index.html' %}#contact{% else %}{{ '#contact' | prepend: "/" }}{% endif %}">Contact</a>
+					<a class="page-scroll" href="{% if page.url == '/' %}#contact{% else %}{{ '#contact' | prepend: '/' }}{% endif %}">Contact</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="{% if page.url == '/index.html' %}#posts{% else %}{{ '#posts' | prepend: "/" }}{% endif %}">Posts</a>
+					<a class="page-scroll" href="{% if page.url == '/' %}#posts{% else %}{{ '#posts' | prepend: '/' }}{% endif %}">Posts</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="{% if page.url == '/index.html' %}#download{% else %}{{ '#download' | prepend: "/" }}{% endif %}">Showreel</a>
+					<a class="page-scroll" href="{% if page.url == '/' %}#download{% else %}{{ '/showreel.index.html' }}{% endif %}">Showreel</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="{% if page.url == '/index.html' %}#about{% else %}{{ '#about' | prepend: "/" }}{% endif %}">About</a>
+					<a class="page-scroll" href="{% if page.url == '/' %}#about{% else %}{{ '#about' | prepend: '/' }}{% endif %}">About</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="{% if page.url == '/index.html' %}#findus{% else %}{{ '#findus' | prepend: "/" }}{% endif %}">Locations</a>
+					<a class="page-scroll" href="{% if page.url == '/' %}#findus{% else %}{{ '#findus' | prepend: '/' }}{% endif %}">Locations</a>
 				</li>
 			</ul>
 		</div>
