@@ -11,23 +11,36 @@
 		<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 			<ul class="nav navbar-nav">
 				<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-				<li class="hidden">
-					<a href="#page-top"></a>
+				<!---{% if page.url != '/showreel/index.html' %}
+				<li>
+					<a {% if page.url == '/index.html' %}href="#page-top" class="active"{% else %}href="#page-top"{% endif %}>HOME</a>
+				</li>
+				{% else %}
+				<li>
+					<a href="/">HOME</a>
+				</li>
+				{% endif %}--->
+				<li>
+				{% if page.url == '/index.html' %}
+					<a href="#page-top" class="active">HOME</a>
+				{% else %}
+					<a href="/" class="active">HOME</a>
+				{% endif %}
 				</li>
 				<li>
 					<a class="page-scroll" href="{% if page.url == '/' %}#contact{% else %}{{ '#contact' | prepend: '/' }}{% endif %}">Contact</a>
 				</li>
-				<li>
-					<a class="page-scroll" href="{% if page.url == '/' %}#posts{% else %}{{ '#posts' | prepend: '/' }}{% endif %}">Posts</a>
+				<li {% if page.url == '/posts/index.html' or page.page-type == "post" %}class="active"{% endif %}>
+					<a class="page-scroll" href="{% if page.url == '/' %}#posts{% else %}{{ site.baseurl }}/posts/index.html{% endif %}">Posts</a>
 				</li>
-				<li>
-					<a class="page-scroll" href="{% if page.url == '/' %}#download{% else %}{{ '#posts' | prepend: '/' }}{% endif %}">Showreel</a>
+				<li {% if page.url == '/showreel/index.html' %}class="active"{% endif %}>
+					<a class="page-scroll" href="{% if page.url == '/' %}#download{% else %}{{ site.baseurl }}/showreel/index.html{% endif %}">Showreel</a>
 				</li>
 				<li>
 					<a class="page-scroll" href="{% if page.url == '/' %}#about{% else %}{{ '#about' | prepend: '/' }}{% endif %}">About</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="{% if page.url == '/' %}#findus{% else %}{{ '#findus' | prepend: '/' }}{% endif %}">Locations</a>
+					<a class="page-scroll" href="{% if page.url == '/' %}#findus{% else %}{{ '#findus' | prepend: '/' }}{% endif %}">Location</a>
 				</li>
 			</ul>
 		</div>

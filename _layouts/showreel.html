@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    {% include navbar.html %}
+	
+	{{ content }}
+	
+    <!-- Footer -->
+   {% include footer.html %}
+	<script>
+		$(function(){
+			$.ajax({
+				url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=200&callback=?&q=' + encodeURIComponent('https://picasaweb.google.com/data/feed/api/user/109397592201784565459/albumid/6238173717670863777?kind=photo&authkey=Gv1sRgCOqQ5p7kgJT4vQE&hl=en_US&access=public'),
+				dataType : 'json',
+				success  : function (data) {
+				var count = 0;
+				$.each(data.responseData.feed.entries, function (i, e) {
+					$("ul.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url +');"></div></a></li>'
+					);
+				});
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
