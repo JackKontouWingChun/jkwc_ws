@@ -21,7 +21,7 @@
 					<a class="page-scroll" href="{% if page.url == '/' %}#posts{% else %}{{ '#posts' | prepend: '/' }}{% endif %}">Posts</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="{% if page.url == '/' %}#download{% else %}{{ '/showreel.index.html' }}{% endif %}">Showreel</a>
+					<a class="page-scroll" href="{% if page.url == '/' %}#download{% else %}{{ '#posts' | prepend: '/' }}{% endif %}">Showreel</a>
 				</li>
 				<li>
 					<a class="page-scroll" href="{% if page.url == '/' %}#about{% else %}{{ '#about' | prepend: '/' }}{% endif %}">About</a>
