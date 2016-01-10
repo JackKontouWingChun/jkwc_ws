@@ -1,3 +1,5 @@
+---
+---
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
@@ -23,6 +25,7 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+{% if page.url == "/index.html" %}
 // MY GOOGLE MAPS FROM MAPBUILDER -- snazzy maps: https://mapbuildr.com/buildr/mmbsb3
 google.maps.event.addDomListener(window, 'load', init);
 var map;
@@ -148,3 +151,4 @@ function init() {
 		});
 	}
 }
+{% endif %}

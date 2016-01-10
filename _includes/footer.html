@@ -37,7 +37,8 @@
 			
 			
 		$( 'a[data-imagelightbox="a"]' ).imageLightbox(
-		{
+		{	
+			quitOnImgClick: false,
 			onStart: 	 function() { overlayOn(); },
 			onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
 			onLoadStart: function() { activityIndicatorOn(); },
@@ -53,9 +54,9 @@
 
 <!-- Plugin JavaScript -->
 <script src="{{ site.baseurl }}/js/jquery.easing.min.js"></script>
-
+{% if page.url == "/index.html" %}
 <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
 <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
-
+{% endif %}
 <!-- Custom Theme JavaScript -->
 <script src="{{ site.baseurl }}/js/custom.js"></script>
