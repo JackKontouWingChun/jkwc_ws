@@ -19,7 +19,7 @@
 				success  : function (data) {
 				var count = 0;
 				$.each(data.responseData.feed.entries, function (i, e) {
-					$("ul.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="' + e.mediaGroups[0].contents[0].url + '"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url +');"></div></a></li>'
+					$("ul.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="' + e.mediaGroups[0].contents[0].url + '" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url +');"></div></a></li>'
 					);
 				});
 				}

@@ -8,6 +8,45 @@
 
 <!-- jQuery -->
 <script src="{{ site.baseurl }}/js/jquery.js"></script>
+<script src="http://osvaldas.info/examples/image-lightbox-responsive-touch-friendly/imagelightbox.min.js"></script>
+<script type="text/javascript">
+	$( function()
+    {
+		// ACTIVITY INDICATOR
+
+		var activityIndicatorOn = function()
+			{
+				$( '<div id="imagelightbox-loading"><div></div></div>' ).appendTo( 'body' );
+			},
+			activityIndicatorOff = function()
+			{
+				$( '#imagelightbox-loading' ).remove();
+			},
+
+
+			// OVERLAY
+
+			overlayOn = function()
+			{
+				$( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' );
+			},
+			overlayOff = function()
+			{
+				$( '#imagelightbox-overlay' ).remove();
+			}
+			
+			
+		$( 'a[data-imagelightbox="a"]' ).imageLightbox(
+		{
+			onStart: 	 function() { overlayOn(); },
+			onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
+			onLoadStart: function() { activityIndicatorOn(); },
+			onLoadEnd:	 function() { activityIndicatorOff(); }
+		});
+    });
+	 
+	
+</script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
