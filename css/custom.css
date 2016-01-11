@@ -590,9 +590,6 @@ img{
 		max-width:150px;
 		max-height: 150px;
 	}
-	.feature{
-		min-height: 40vh;
-	}
 }
 
 @media (max-width: 767px) and (orientation: landscape){
