@@ -482,6 +482,9 @@ body {
 	margin: 0 0 5px;
 }
 
+article.post-content img{
+	max-width:330px;
+}
 /* CUSTOMISED */
 
 
