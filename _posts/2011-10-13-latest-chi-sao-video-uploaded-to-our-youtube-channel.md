@@ -2,7 +2,7 @@
 layout: post
 published: true
 category: youtube
-title: Latest Chi Sao video uploaded to our YouTube channel
+title: Latest Chi Sao video
 thumbnail: njDz36nBY9k
 res: hq
 ---

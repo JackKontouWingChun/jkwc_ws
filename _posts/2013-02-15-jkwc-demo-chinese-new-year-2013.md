@@ -2,7 +2,7 @@
 layout: post
 published: true
 category: youtube
-title: "JKWC Demo - Chinese New Year 2013"
+title: "Demo - Chinese New Year"
 thumbnail: LXec-_YHKiA
 ---
 

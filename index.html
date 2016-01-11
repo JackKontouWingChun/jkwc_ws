@@ -38,7 +38,7 @@ published: true
 		<div style="margin-top:30px;">
 			<div class="row">
 				{% for post in paginator.posts limit:6 %}
-				<div class="col-sm-4 feature">
+				<div class="col-sm-4 col-xs-6 feature">
 						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
 							{% if post.category == 'youtube' %}
 							<div class="img-circular" style="background-image: url('http://img.youtube.com/vi/{{ post.thumbnail }}/{% if post.res %}{{ post.res }}{% else %}maxres{% endif %}default.jpg');"></div>

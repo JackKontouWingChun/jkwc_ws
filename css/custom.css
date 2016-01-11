@@ -586,7 +586,10 @@ img{
 	#slide3 {
         background: url('../img/slide3_small.jpg') top left no-repeat;
     }
-	
+	.img-circular{
+		max-width:150px;
+		max-height: 150px;
+	}
 }
 
 
