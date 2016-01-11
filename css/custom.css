@@ -592,7 +592,11 @@ img{
 	}
 }
 
-
+@media (max-width: 767px) and (orientation: landscape){
+	.img-post{
+		min-height: 60vh;
+	}
+}
 
 /* Large desktop */
 @media (min-width: 1200px) {
@@ -625,6 +629,8 @@ img{
     position: fixed;
     z-index: 9999;
  
+    -ms-touch-action: none;
+    touch-action: none;
 }
 #imagelightbox-overlay
 {
