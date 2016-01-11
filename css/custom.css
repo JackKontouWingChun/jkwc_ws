@@ -185,7 +185,16 @@ a.post-link:focus{
     vertical-align: middle;
 }
 .brand-heading{
-	font-family: "Devil Breeze"
+	font-family: "Devil Breeze";
+	text-shadow: 0.05em 0.05em 0.05em #000;
+}
+#navbar-branding{
+	position: absolute;
+    float: left;
+    padding: 5px;
+    margin: 15px 0px;
+    background-color: transparent;
+    background-image: none;
 }
 .intro .intro-body .brand-heading {
     font-size: 40px;
