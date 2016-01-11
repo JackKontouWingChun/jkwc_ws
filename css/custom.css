@@ -625,8 +625,6 @@ img{
     position: fixed;
     z-index: 9999;
  
-    -ms-touch-action: none;
-    touch-action: none;
 }
 #imagelightbox-overlay
 {
