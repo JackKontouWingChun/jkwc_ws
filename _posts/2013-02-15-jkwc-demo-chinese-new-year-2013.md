@@ -2,7 +2,7 @@
 layout: post
 published: true
 category: youtube
-title: "Demo - Chinese New Year"
+title: "Chinese New Year Demo"
 thumbnail: LXec-_YHKiA
 ---
 
