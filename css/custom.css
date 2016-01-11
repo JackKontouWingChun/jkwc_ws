@@ -196,6 +196,18 @@ a.post-link:focus{
     background-color: transparent;
     background-image: none;
 }
+#navbar-branding-bars{
+	position: relative;
+    float: right;
+    padding: 9px 0px;
+    margin-top: 8px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 .intro .intro-body .brand-heading {
     font-size: 40px;
 	text-shadow: 0.05em 0.05em 0.05em #000;
