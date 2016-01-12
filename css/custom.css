@@ -3,7 +3,8 @@ body {
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-color: #000;
+    background-color: #ccc;
+	background:url("../img/cagebg.gif") repeat;
 }
 
 html {
@@ -164,25 +165,43 @@ a.post-link:focus{
         background: rgba(0, 0, 0, 0.67);
     }
 }
+/*necessary for full height/width background image within home page*/
+.intro-header{
+	width:100%;
+	height:100%;
+}
+.intro-header::after{
+	content:"";
+	position: absolute;
+	right: 0;
+	left: 0;
+	height: 50%;
+	background: linear-gradient(180deg, rgba(0,0,0,1), rgba(0,0,0,0));
+}
 
 .intro {
     display: table;
     width: 100%;
+	min-height: 285px;
     height: auto;
-    padding: 100px 0;
+    padding: 100px 0 0 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg0.jpg) no-repeat bottom left scroll;
+    background: url("https://lh3.googleusercontent.com/VQXPVgzxdeMTCP2Qz3t6_ALuvi-Wlf2X69nXVm4pRSNIV2P68zl3ham9XyBGovI-AmmA_MkvFHfB=w1108-h571-no") no-repeat bottom right scroll;
+	background-position-x: 50%;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
-
 .intro .intro-body {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: bottom;
+}
+.intro .intro-body img{
+	content: url("https://lh3.googleusercontent.com/OJ01p7x2lzlFTbo23wAOn0U8ec8LQcPlu3r-OGsYKHjSQ7uaKU-ITVgIHefApHGPZOKoKVkwQmFQ=w916-h446-no");
+	max-width: 60vw;
 }
 .brand-heading{
 	font-family: "Devil Breeze";
@@ -219,9 +238,10 @@ a.post-link:focus{
 }
 
 @media(min-width:768px) {
-    .intro {
+	.intro {
         height: 100%;
         padding: 0;
+		background-position-x: 60%;
     }
 
     .intro .intro-body .brand-heading {
@@ -234,13 +254,12 @@ a.post-link:focus{
 }
 
 .btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
+    width: 50px;
+    height: 50px;
+   padding: 3px 7px;
     border: 2px solid #fff;
     border-radius: 100%!important;
-    font-size: 40px;
+    font-size: 31px;
     color: #fff;
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
@@ -553,8 +572,12 @@ img{
 /* CUSTOM MEDIA QUERIES */
 
 @media (max-width: 767px) {
+	.intro-header{
+		height:auto;
+	}
 	.intro{
-		background-position-x: 30%;
+		background-position-x: 70%;
+		margin-top: 56px;
 	}
 	 .content-section {
         padding-top: 50px;
@@ -601,6 +624,11 @@ img{
 	}
 }
 
+@media (min-width: 768px) and (max-width: 991px){
+	.brand-heading.Devil-Breeze{
+		display:none;
+	}
+}
 /* Large desktop */
 @media (min-width: 1200px) {
     #myCarousel .item { height: 500px; }
