@@ -72,7 +72,7 @@ a.post-link:focus{
 	text-align:center;
 	vertical-align:top;
 }
-.timetable th:not(:first-child){
+.timetable th{
 	color:#777;
 }
 }.timetable td{
@@ -344,7 +344,6 @@ a.post-link:focus{
 #jkwc {
 	height:300px;
 	width:100%;
-	margin-top: 50px;
 }
 #showreelthumb{
 	padding:2px;
