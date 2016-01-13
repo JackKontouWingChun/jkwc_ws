@@ -121,7 +121,7 @@ a.post-link:focus{
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
-	text-shadow: 0.05em 0.05em 0.05em #000;
+	text-shadow: 0.05em 0.05em 0.5em #000;
 }
 
 .navbar-custom .nav li a:hover {
