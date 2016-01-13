@@ -202,6 +202,7 @@ a.post-link:focus{
 .intro .intro-body img{
 	content: url("https://lh3.googleusercontent.com/OJ01p7x2lzlFTbo23wAOn0U8ec8LQcPlu3r-OGsYKHjSQ7uaKU-ITVgIHefApHGPZOKoKVkwQmFQ=w916-h446-no");
 	max-width: 60vw;
+	max-height: 35vh;
 }
 .brand-heading{
 	font-family: "Devil Breeze";
