@@ -502,7 +502,7 @@ body {
 }
 
 article.post-content img{
-	max-width:330px;
+	max-width: 100%;
 }
 /* CUSTOMISED */
 
