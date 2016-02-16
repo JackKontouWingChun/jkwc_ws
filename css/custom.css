@@ -573,6 +573,9 @@ img{
 	background-size: cover;
 }
 
+#portfolio_galleries h2{
+	margin-top: 70px;
+}
 /* CUSTOM MEDIA QUERIES */
 
 @media (max-width: 767px) {
