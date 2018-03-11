@@ -13,7 +13,7 @@
 		function cbSuccess(data, folder) {
 			$(`ul.gallery_${folder}.row.list-unstyled`).before(`<h2>${folder}</h2>`);
 			debugger;
-			const hrefs = data.match(/href=("|')(.*?)("|')/g);
+			const hrefs = data.match(/<a([^>]*?)href\s*=\s*(['"])([^\2]*?)\2\1*>/i);
 			hrefs.forEach(href => (
 				$(`ul.gallery_${folder}.row.list-unstyled`)
 					.append(`<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="${href}" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(${href});"></div></a></li>`)));
