@@ -10,59 +10,57 @@
 	<!-- Footer -->
 	{% include footer.html %}
 	<script>
-		function cbSuccess(data, folder) {
-			$(`ul.gallery_${folder}.row.list-unstyled`).before(`<h2>${folder}</h2>`);
-			debugger;
-			const hrefs = data.match(/<a([^>]*?)href\s*=\s*(['"])([^\2]*?)\2\1*>/i);
+		const galleriesData = [
+			{
+				folder: 'Bodybuilding',
+				tag: 'bodybuidling'
+			},
+			{
+				folder: 'Wooden%20Dummy',
+				tag: 'woodendummy'
+			},
+			{
+				folder: 'GM%20Victor%20Kan',
+				tag: 'gmvk'
+			},
+			{
+				folder: 'Magazine%20articles',
+				tag: 'articles'
+			},
+			{
+				folder: 'Misc',
+				tag: 'misc'
+			},
+			{
+				folder: 'Seminars',
+				tag: 'seminars'
+			},
+			{
+				folder: 'JKWC%20Junior%20class',
+				tag: 'juniorclass'
+			},
+		];
+
+		function cbSuccess(hrefs, folder, tag) {
+			$(`ul.gallery_${tag}.row.list-unstyled`).before(`<h2>${folder}</h2>`);
+
 			hrefs.forEach(href => (
-				$(`ul.gallery_${folder}.row.list-unstyled`)
+				$(`ul.gallery_${tag}.row.list-unstyled`)
 					.append(`<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="${href}" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(${href});"></div></a></li>`)));
 		}
-		$(function () {
-			$.ajax({
-				url: 'https://jkwcweb.sirv.com/Images/Bodybuilding',
-				success: function (data) {
-					cbSuccess(data, 'bodybuilding');
-				}
-			});
-			$.ajax({
-				url: 'https://jkwcweb.sirv.com/Images/Wooden%20Dummy',
-				success: function (data) {
-					cbSuccess(data, 'woodendummy');
-				}
-			});
-			$.ajax({
-				url: 'https://jkwcweb.sirv.com/Images/GM%20Victor%20Kan',
-				success: function (data) {
-					cbSuccess(data, 'gmvk');
-				}
-			});
-			$.ajax({
-				url: 'https://jkwcweb.sirv.com/Images/Magazine%20articles',
-				success: function (data) {
-					cbSuccess(data, 'articles');
-				}
-			});
-			$.ajax({
-				url: 'https://jkwcweb.sirv.com/Images/Misc',
-				dataType: 'json',
-				success: function (data) {
-					cbSuccess(data, 'misc');
-				}
-			});
-			$.ajax({
-				url: 'https://jkwcweb.sirv.com/Images/Seminars',
-				success: function (data) {
-					cbSuccess(data, 'seminars');
-				}
-			});
-			$.ajax({
-				url: 'https://jkwcweb.sirv.com/Images/JKWC%20Junior%20class',
-				success: function (data) {
-					cbSuccess(data, 'gallery_juniorclass');
-				}
-			});
-		});
+
+		galleriesData.forEach(({ folder, tag }) => {
+			fetch(`https://jkwcweb.sirv.com/Images/${folder}`)
+				.then(res => res.text())
+				.then(html => {
+					const hrefs = html.match(/(?:href=)"([^"]*")/ig)
+					return hrefs.map(c => c.replace('href=', 'https:'));
+				})
+				.then(hrefs => cbSuccess(hrefs, folder, tag));
+		})
+
+
+
 	</script>
 </body>
 
