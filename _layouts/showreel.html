@@ -14,83 +14,58 @@
 			$(`ul.gallery_${folder}.row.list-unstyled`).before(`<h2>${folder}</h2>`);
 
 			const hrefs = data.match(/href=("|')(.*?)("|')/g);
-			href.map(href => (
+			hrefs.forEach(href => (
 				$(`ul.gallery_${folder}.row.list-unstyled`)
-					.append(`<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="${href}" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(${href});"></div></a></li>`);
+					.append(`<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="${href}" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(${href});"></div></a></li>`)));
 		}
 		$(function () {
 			$.ajax({
 				url: document.location.protocol + 'https://jkwcweb.sirv.com/Images/Bodybuilding',
 				dataType: 'json',
 				success: function (data) {
-					cbSuccess(data, 'bodybuilding')
+					cbSuccess(data, 'bodybuilding');
 				}
 			});
 			$.ajax({
-				url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=200&callback=?&q=' + encodeURIComponent('https://picasaweb.google.com/data/feed/api/user/109397592201784565459/album/WoodenDummy'),
+				url: document.location.protocol + 'https://jkwcweb.sirv.com/Images/Wooden%20Dummy',
 				dataType: 'json',
 				success: function (data) {
-					$("ul.gallery_woodendummy.row.list-unstyled").before("<h2>" + data.responseData.feed.title + "</h2>");
-					$.each(data.responseData.feed.entries, function (i, e) {
-						$("ul.gallery_woodendummy.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="' + e.mediaGroups[0].contents[0].url + '" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url + ');"></div></a></li>'
-						);
-					});
+					cbSuccess(data, 'woodendummy');
 				}
 			});
 			$.ajax({
-				url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=200&callback=?&q=' + encodeURIComponent('https://picasaweb.google.com/data/feed/api/user/109397592201784565459/album/GMVictorKan'),
+				url: document.location.protocol + 'https://jkwcweb.sirv.com/Images/GM%20Victor%20Kan',
 				dataType: 'json',
 				success: function (data) {
-					$("ul.gallery_gmvk.row.list-unstyled").before("<h2>" + data.responseData.feed.title + "</h2>");
-					$.each(data.responseData.feed.entries, function (i, e) {
-						$("ul.gallery_gmvk.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="' + e.mediaGroups[0].contents[0].url + '" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url + ');"></div></a></li>'
-						);
-					});
+					cbSuccess(data, 'galler_gmvk');
 				}
 			});
 			$.ajax({
-				url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=200&callback=?&q=' + encodeURIComponent('https://picasaweb.google.com/data/feed/api/user/109397592201784565459/album/MagazineArticles'),
+				url: document.location.protocol + 'https://jkwcweb.sirv.com/Images/Magazine%20articles',
 				dataType: 'json',
 				success: function (data) {
-					$("ul.gallery_articles.row.list-unstyled").before("<h2>" + data.responseData.feed.title + "</h2>");
-					$.each(data.responseData.feed.entries, function (i, e) {
-						$("ul.gallery_articles.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="' + e.mediaGroups[0].contents[0].url + '" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url + ');"></div></a></li>'
-						);
-					});
+					cbSuccess(data, 'gallery_articles');
 				}
 			});
 			$.ajax({
-				url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=200&callback=?&q=' + encodeURIComponent('https://picasaweb.google.com/data/feed/api/user/109397592201784565459/album/Misc'),
+				url: document.location.protocol + 'https://jkwcweb.sirv.com/Images/Misc',
 				dataType: 'json',
 				success: function (data) {
-					$("ul.gallery_misc.row.list-unstyled").before("<h2>" + data.responseData.feed.title + "</h2>");
-					$.each(data.responseData.feed.entries, function (i, e) {
-						$("ul.gallery_misc.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="' + e.mediaGroups[0].contents[0].url + '" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url + ');"></div></a></li>'
-						);
-					});
+					cbSuccess(data, 'gallery_misc');
 				}
 			});
 			$.ajax({
-				url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=200&callback=?&q=' + encodeURIComponent('https://picasaweb.google.com/data/feed/api/user/109397592201784565459/album/Seminars'),
+				url: document.location.protocol + 'https://jkwcweb.sirv.com/Images/Seminars',
 				dataType: 'json',
 				success: function (data) {
-					$("ul.gallery_seminars.row.list-unstyled").before("<h2>" + data.responseData.feed.title + "</h2>");
-					$.each(data.responseData.feed.entries, function (i, e) {
-						$("ul.gallery_seminars.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="' + e.mediaGroups[0].contents[0].url + '" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url + ');"></div></a></li>'
-						);
-					});
+					cbSuccess(data, 'gallery_seminars');
 				}
 			});
 			$.ajax({
-				url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=200&callback=?&q=' + encodeURIComponent('https://picasaweb.google.com/data/feed/api/user/109397592201784565459/album/JKWCJuniorClass'),
+				url: document.location.protocol + 'https://jkwcweb.sirv.com/Images/JKWC%20Junior%20class',
 				dataType: 'json',
 				success: function (data) {
-					var count = 0;
-					$("ul.gallery_juniorclass.row.list-unstyled").before("<h2>" + data.responseData.feed.title + "</h2>");
-					$.each(data.responseData.feed.entries, function (i, e) {
-						$("ul.gallery_juniorclass.row.list-unstyled").append('<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="' + e.mediaGroups[0].contents[0].url + '" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(' + e.mediaGroups[0].contents[0].url + ');"></div></a></li>'
-						);
-					});
+					cbSuccess(data, 'gallery_juniorclass');
 				}
 			});
 		});
