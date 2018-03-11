@@ -12,7 +12,7 @@
 	<script>
 		function cbSuccess(data, folder) {
 			$(`ul.gallery_${folder}.row.list-unstyled`).before(`<h2>${folder}</h2>`);
-
+			debugger;
 			const hrefs = data.match(/href=("|')(.*?)("|')/g);
 			hrefs.forEach(href => (
 				$(`ul.gallery_${folder}.row.list-unstyled`)
@@ -27,42 +27,37 @@
 			});
 			$.ajax({
 				url: 'https://jkwcweb.sirv.com/Images/Wooden%20Dummy',
-				dataType: 'json',
 				success: function (data) {
 					cbSuccess(data, 'woodendummy');
 				}
 			});
 			$.ajax({
 				url: 'https://jkwcweb.sirv.com/Images/GM%20Victor%20Kan',
-				dataType: 'json',
 				success: function (data) {
-					cbSuccess(data, 'galler_gmvk');
+					cbSuccess(data, 'gmvk');
 				}
 			});
 			$.ajax({
 				url: 'https://jkwcweb.sirv.com/Images/Magazine%20articles',
-				dataType: 'json',
 				success: function (data) {
-					cbSuccess(data, 'gallery_articles');
+					cbSuccess(data, 'articles');
 				}
 			});
 			$.ajax({
 				url: 'https://jkwcweb.sirv.com/Images/Misc',
 				dataType: 'json',
 				success: function (data) {
-					cbSuccess(data, 'gallery_misc');
+					cbSuccess(data, 'misc');
 				}
 			});
 			$.ajax({
 				url: 'https://jkwcweb.sirv.com/Images/Seminars',
-				dataType: 'json',
 				success: function (data) {
-					cbSuccess(data, 'gallery_seminars');
+					cbSuccess(data, 'seminars');
 				}
 			});
 			$.ajax({
 				url: 'https://jkwcweb.sirv.com/Images/JKWC%20Junior%20class',
-				dataType: 'json',
 				success: function (data) {
 					cbSuccess(data, 'gallery_juniorclass');
 				}
