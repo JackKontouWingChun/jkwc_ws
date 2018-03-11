@@ -42,6 +42,10 @@
 		];
 
 		function cbSuccess(hrefs, folder, tag) {
+			if (!hrefs.length) {
+				return;
+			}
+
 			$(`ul.gallery_${tag}.row.list-unstyled`).before(`<h2>${folder}</h2>`);
 
 			hrefs.forEach(href => (
@@ -52,12 +56,8 @@
 		galleriesData.forEach(({ folder, tag }) => {
 			fetch(`https://jkwcweb.sirv.com/Images/${folder}`)
 				.then(res => res.text())
-				.then(html => {
-					debugger;
-					const hrefs = html.match(/(?:href=)"([^"]*")/ig)
-					return hrefs.map(c => encodeURI(`https:${eval(c)}`));
-				})
-				.then(uris => cbSuccess(uris, folder, tag));
+				.then(html => $(html).find('[href]').toArray().map(c => c.href))
+				.then(hrefs => cbSuccess(hrefs, folder, tag));
 		})
 
 
