@@ -50,7 +50,7 @@
 
 			hrefs.forEach(href => (
 				$(`ul.gallery_${tag}.row.list-unstyled`)
-					.append(`<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="${href}" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(${href});"></div></a></li>`)));
+					.append(`<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="${href}" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(${href}?w=250);"></div></a></li>`)));
 		}
 
 		galleriesData.forEach(({ folder, tag }) => {
