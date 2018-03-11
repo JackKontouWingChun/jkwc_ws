@@ -54,7 +54,9 @@
 				.then(res => res.text())
 				.then(html => {
 					const hrefs = html.match(/(?:href=)"([^"]*")/ig)
-					return hrefs.map(c => c.replace('href=', 'https:'));
+					const urls = hrefs.map(c => c.replace('href=', 'https:'));
+					debugger;
+					return urls;
 				})
 				.then(hrefs => cbSuccess(hrefs, folder, tag));
 		})
