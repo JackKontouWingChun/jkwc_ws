@@ -16,15 +16,15 @@
 				tag: 'bodybuidling'
 			},
 			{
-				folder: 'Wooden%20Dummy',
+				folder: 'Wooden Dummy',
 				tag: 'woodendummy'
 			},
 			{
-				folder: 'GM%20Victor%20Kan',
+				folder: 'GM Victor Kan',
 				tag: 'gmvk'
 			},
 			{
-				folder: 'Magazine%20articles',
+				folder: 'Magazine articles',
 				tag: 'articles'
 			},
 			{
@@ -36,7 +36,7 @@
 				tag: 'seminars'
 			},
 			{
-				folder: 'JKWC%20Junior%20class',
+				folder: 'JKWC Junior class',
 				tag: 'juniorclass'
 			},
 		];
@@ -53,6 +53,7 @@
 			fetch(`https://jkwcweb.sirv.com/Images/${folder}`)
 				.then(res => res.text())
 				.then(html => {
+					debugger;
 					const hrefs = html.match(/(?:href=)"([^"]*")/ig)
 					return hrefs.map(c => encodeURI(`https:${eval(c)}`));
 				})
