@@ -88,8 +88,8 @@ function init() {
                 email: email,
                 web: web
             });
-			if (web.substring(0, 7) != "http://") {
-				link = "http://" + web;
+			if (web.substring(0, 7) != "https://") {
+				link = "https://" + web;
 			} else {
 				link = web;
 			}

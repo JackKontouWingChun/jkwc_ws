@@ -15,7 +15,7 @@ title: Posts
 				<div class="col-sm-4 col-xs-6 feature">
 						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
 							{% if post.category == 'youtube' %}
-							<div class="img-circular" style="background-image: url('http://img.youtube.com/vi/{{ post.thumbnail }}/{% if post.res %}{{ post.res }}{% else %}maxres{% endif %}default.jpg');"></div>
+							<div class="img-circular" style="background-image: url('https://img.youtube.com/vi/{{ post.thumbnail }}/{% if post.res %}{{ post.res }}{% else %}maxres{% endif %}default.jpg');"></div>
 							{% else %}
 								{% if post.thumbnail %}
 								<div class="img-circular" style="background-image: url('{{ post.thumbnail | prepend: site.baseurl }}');"></div>

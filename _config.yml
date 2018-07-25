@@ -3,7 +3,7 @@ title: JKWC - Jack Kontou Wing Chun
 email: info@jkwc.co.uk
 description:
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jkwc.co.uk" # the base hostname & protocol for your site
+url: "https://jkwc.co.uk" # the base hostname & protocol for your site
 twitter_username: "Jack_Kontou"
 paginate: 10
 
@@ -13,7 +13,7 @@ highlighter: pygments
 
 # prose.io  settings
 prose:
-  siteurl: "http://jackkontouwingchun.github.io/"
+  siteurl: "https://jackkontouwingchun.github.io/"
   media: "img"
   ignore:
     - .gitignore
