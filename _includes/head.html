@@ -1,29 +1,94 @@
 <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{ site.description }}" />
+  <title>Jack Kontou Wing Chun Kung Fu</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "image": [
+        "https://example.com/photos/1x1/photo.jpg",
+        "https://example.com/photos/4x3/photo.jpg",
+        "https://example.com/photos/16x9/photo.jpg"
+       ],
+      "@id": "https://jkwc.co.uk/",
+      "name": "Jack Kontou Wing Chun Kung Fu",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "108 Churchfield Road",
+        "addressLocality": "Acton",
+        "addressRegion": "London",
+        "postalCode": "W3 6BY",
+        "addressCountry": "UK"
+      }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.507273,
+        "longitude": -0.269545
+      },
+      "url": "https://jkwc.co.uk/",
+      "telephone": "+447951129140",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Thursday"
+          ],
+          "opens": "19:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+          ],
+          "opens": "12:30",
+          "closes": "15:30"
+        },
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="">
+      ],
+    }
+  </script>
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css"">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css"">
-		
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css" />
 
-    <!-- Custom Fonts -->
-    <link  rel="stylesheet" type="text/css" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css">
-	<link  rel="stylesheet" type="text/css" href="{{ site.baseurl }}/fonts/devil-breeze/DevilBreeze.css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <!-- Custom Fonts -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ site.baseurl }}/fonts/devil-breeze/DevilBreeze.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
