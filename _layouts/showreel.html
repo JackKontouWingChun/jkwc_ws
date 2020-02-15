@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% include head.html %}
 
-{% include head.html %}
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    {% include navbar.html %} {{ content }}
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Footer -->
+    {% include footer.html %}
+    <script>
+      const galleriesData = [
+        {
+          folder: "JKWC Junior class",
+          tag: "juniorclass"
+        },
+        {
+          folder: "Bodybuilding",
+          tag: "bodybuidling"
+        },
+        {
+          folder: "Wooden Dummy",
+          tag: "woodendummy"
+        },
+        {
+          folder: "GM Victor Kan",
+          tag: "gmvk"
+        },
+        {
+          folder: "Magazine articles",
+          tag: "articles"
+        },
+        {
+          folder: "Misc",
+          tag: "misc"
+        },
+        {
+          folder: "Seminars",
+          tag: "seminars"
+        }
+      ];
 
-	{% include navbar.html %} {{ content }}
+      function cbSuccess(hrefs, folder, tag) {
+        if (!hrefs.length) {
+          return;
+        }
 
-	<!-- Footer -->
-	{% include footer.html %}
-	<script>
-		const galleriesData = [
-			{
-				folder: 'Bodybuilding',
-				tag: 'bodybuidling'
-			},
-			{
-				folder: 'Wooden Dummy',
-				tag: 'woodendummy'
-			},
-			{
-				folder: 'GM Victor Kan',
-				tag: 'gmvk'
-			},
-			{
-				folder: 'Magazine articles',
-				tag: 'articles'
-			},
-			{
-				folder: 'Misc',
-				tag: 'misc'
-			},
-			{
-				folder: 'Seminars',
-				tag: 'seminars'
-			},
-			{
-				folder: 'JKWC Junior class',
-				tag: 'juniorclass'
-			},
-		];
+        $(`ul.gallery_${tag}.row.list-unstyled`).before(`<h2>${folder}</h2>`);
 
-		function cbSuccess(hrefs, folder, tag) {
-			if (!hrefs.length) {
-				return;
-			}
+        hrefs.forEach(href =>
+          $(`ul.gallery_${tag}.row.list-unstyled`).append(
+            `<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="${href}" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(${href}?w=250);"></div></a></li>`
+          )
+        );
+      }
 
-			$(`ul.gallery_${tag}.row.list-unstyled`).before(`<h2>${folder}</h2>`);
-
-			hrefs.forEach(href => (
-				$(`ul.gallery_${tag}.row.list-unstyled`)
-					.append(`<li id="showreelthumb" class="col-xs-6 col-sm-3"><a class="post-link" href="${href}" data-imagelightbox="a"><div class="img-post img-post-portfolio" style="background-image: url(${href}?w=250);"></div></a></li>`)));
-		}
-
-		galleriesData.forEach(({ folder, tag }) => {
-			fetch(`https://jkwcweb.sirv.com/Images/${folder}`)
-				.then(res => res.text())
-				.then(html => $(html).find('[href]').toArray().map(c => c.href))
-				.then(hrefs => cbSuccess(hrefs, folder, tag));
-		})
-
-
-
-	</script>
-</body>
-
+      galleriesData.forEach(({ folder, tag }) => {
+        fetch(`https://jkwcweb.sirv.com/Images/${folder}`)
+          .then(res => res.text())
+          .then(html =>
+            $(html)
+              .find("[href]")
+              .toArray()
+              .map(c => c.href)
+          )
+          .then(hrefs => cbSuccess(hrefs, folder, tag));
+      });
+    </script>
+  </body>
 </html>
