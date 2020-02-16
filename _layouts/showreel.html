@@ -54,6 +54,9 @@
       }
 
       galleriesData.forEach(({ folder, tag }) => {
+        $("#portfolio_galleries").append(
+          `<div class="row"><ul class="gallery_${tag} row list-unstyled"></ul></div>`
+        );
         fetch(`https://jkwcweb.sirv.com/Images/${folder}`)
           .then(res => res.text())
           .then(html =>
