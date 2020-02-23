@@ -1,0 +1,6 @@
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+
+whitelist:
+  - jekyll-paginate
