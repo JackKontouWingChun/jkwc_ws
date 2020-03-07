@@ -1,64 +1,61 @@
 <!-- Footer -->
 <footer>
-	<div class="container text-center">
-		<p>Copyright &copy; Jack Kontou Wing Chun 2015</p>
-	</div>
+  <div class="container text-center">
+    <p>Copyright &copy; Jack Kontou Wing Chun 2015</p>
+  </div>
 </footer>
-
 
 <!-- jQuery -->
 <script src="{{ site.baseurl }}/js/jquery.js"></script>
 <script src="https://osvaldas.info/examples/image-lightbox-responsive-touch-friendly/imagelightbox.min.js"></script>
 <script type="text/javascript">
-	$( function()
-    {
-		// ACTIVITY INDICATOR
+  $(function() {
+    // ACTIVITY INDICATOR
 
-		var activityIndicatorOn = function()
-			{
-				$( '<div id="imagelightbox-loading"><div></div></div>' ).appendTo( 'body' );
-			},
-			activityIndicatorOff = function()
-			{
-				$( '#imagelightbox-loading' ).remove();
-			},
+    var activityIndicatorOn = function() {
+        $('<div id="imagelightbox-loading"><div></div></div>').appendTo("body");
+      },
+      activityIndicatorOff = function() {
+        $("#imagelightbox-loading").remove();
+      },
+      // OVERLAY
 
+      overlayOn = function() {
+        $('<div id="imagelightbox-overlay"></div>').appendTo("body");
+      },
+      overlayOff = function() {
+        $("#imagelightbox-overlay").remove();
+      };
 
-			// OVERLAY
-
-			overlayOn = function()
-			{
-				$( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' );
-			},
-			overlayOff = function()
-			{
-				$( '#imagelightbox-overlay' ).remove();
-			}
-			
-			
-		$( 'a[data-imagelightbox="a"]' ).imageLightbox(
-		{	
-			quitOnImgClick: false,
-			onStart: 	 function() { overlayOn(); },
-			onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
-			onLoadStart: function() { activityIndicatorOn(); },
-			onLoadEnd:	 function() { activityIndicatorOff(); }
-		});
+    $('a[data-imagelightbox="a"]').imageLightbox({
+      quitOnImgClick: false,
+      onStart: function() {
+        overlayOn();
+      },
+      onEnd: function() {
+        overlayOff();
+        activityIndicatorOff();
+      },
+      onLoadStart: function() {
+        activityIndicatorOn();
+      },
+      onLoadEnd: function() {
+        activityIndicatorOff();
+      }
     });
-	 
-	
+  });
 </script>
 
 <!-- Bootstrap Core JavaScript -->
 <!---<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>--->
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
 <script src="{{ site.baseurl }}/js/jquery.easing.min.js"></script>
 
 <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-<!-- <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> -->
-<!-- <script src="{{ site.baseurl }}/js/custommap.js"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWogNE6kGQ2Rr3weKqPgFEZjQhz3FKpUg&sensor=false&extension=.js"></script>
+<script src="{{ site.baseurl }}/js/custommap.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ site.baseurl }}/js/custom.js"></script>
