@@ -576,6 +576,9 @@ img{
 /* CUSTOM MEDIA QUERIES */
 
 @media (max-width: 767px) {
+    .circular-logo{
+        margin: 5px;
+    }
 	.intro-header{
 		height:auto;
 	}
