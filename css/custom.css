@@ -2,7 +2,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #fff;
+    color: #D6CAA6;
     background-color: #000;
 	/*background:url("../img/cagebg.gif") repeat;*/
 }
@@ -41,7 +41,7 @@ p {
 }
 
 a {
-    color: #FFCB01;
+    color: #A53740;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -50,7 +50,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #FFFE01;
+    color: rgb(255, 185, 195);
 }
 
 a.post-link{
@@ -59,7 +59,7 @@ a.post-link{
 
 a.post-link:hover,
 a.post-link:focus{
-	color: #FFCB01;
+	color: #A53740;
 }
 .timetable{
 	margin-top:50px;
@@ -164,7 +164,7 @@ a.post-link:focus{
     }
 
     .navbar-custom.top-nav-collapse {
-        padding: 0;
+        padding: 5px 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: rgba(0, 0, 0, 0.67);
     }
@@ -191,7 +191,7 @@ a.post-link:focus{
     padding: 100px 0 0 0;
     text-align: center;
     color: #fff;
-    background: url("https://lh3.googleusercontent.com/VQXPVgzxdeMTCP2Qz3t6_ALuvi-Wlf2X69nXVm4pRSNIV2P68zl3ham9XyBGovI-AmmA_MkvFHfB=w1108-h571-no") no-repeat bottom right scroll;
+    background: url('../img/landing_page.jpg') no-repeat bottom right scroll;
 	background-position-x: 50%;
     background-color: #000;
     -webkit-background-size: cover;
@@ -203,26 +203,17 @@ a.post-link:focus{
     display: table-cell;
     vertical-align: bottom;
 }
-.intro .intro-body img{
-	content: url("https://lh3.googleusercontent.com/OJ01p7x2lzlFTbo23wAOn0U8ec8LQcPlu3r-OGsYKHjSQ7uaKU-ITVgIHefApHGPZOKoKVkwQmFQ=w916-h446-no");
-	max-width: 60vw;
-	max-height: 35vh;
-}
 .brand-heading{
 	font-family: "Devil Breeze";
 	text-shadow: 0.05em 0.05em 0.05em #000;
 }
 #navbar-branding{
-	position: absolute;
-    float: left;
-    padding: 5px;
-    margin: 15px 0px;
+	position: relative;
     background-color: transparent;
     background-image: none;
 }
 #navbar-branding-bars{
 	position: relative;
-    float: right;
     padding: 9px 0px;
     margin-top: 8px;
     margin-right: 10px;
@@ -346,7 +337,7 @@ a.post-link:focus{
     background-size: cover;
     -o-background-size: cover;
 }
-#jkwc {
+#map {
 	height:300px;
 	width:100%;
 }
@@ -393,10 +384,10 @@ a.post-link:focus{
 }
 
 .btn-default {
-    border: 1px solid #FFCB01;
+    border: 1px solid #A53740;
 	border-radius: 15px;
     color: #000;
-    background-color: #FFCB01;
+    background-color: #A53740;
 }
 
 .btn-default:hover,
@@ -404,20 +395,20 @@ a.post-link:focus{
     border: none;
     outline: 0;
     color: #000;
-    background-color: #FFCB01;
+    background-color: #A53740;
 }
 
 #contact .btn-default {
-    color: #FFCB01;
+    color: #A53740;
     background-color: transparent;
 }
 
 #contact .btn-default:hover,
 #contact.btn-default:focus {
-    border: 1px solid #FFCB01;
+    border: 1px solid #A53740;
     outline: 0;
     color: #000;
-    background-color: #FFCB01;
+    background-color: #A53740;
 }
 
 ul.banner-social-buttons {
@@ -426,8 +417,8 @@ ul.banner-social-buttons {
 ul.banner-social-buttons i {
     width: 40px;
     height: 40px;
-    color: #FFCB01;
-	border: 1px solid #FFCB01;
+    color: #A53740;
+	border: 1px solid #A53740;
     background-color: #000;
     font-size: 22px;
     text-align:center;
@@ -515,6 +506,12 @@ article.post-content img{
 img{
 	max-width: 100%;
 }
+.circular-logo{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+
 .img-circular{
 	width: 200px;
 	height: 200px;
@@ -532,7 +529,7 @@ img{
 }
 
 .navbar-custom .nav li a{
-	color: #FFF;
+	color: #D6CAA6;
 }
 
 .well {
@@ -584,7 +581,6 @@ img{
 	}
 	.intro{
 		background-position-x: 70%;
-		margin-top: 56px;
 	}
 	 .content-section {
         padding-top: 50px;
@@ -595,7 +591,12 @@ img{
     }
 	.navbar-custom {
 		border-bottom: none;
-		background-color: rgba(0, 0, 0, 0.67);
+        background-color: unset;
+        background-image:  linear-gradient(45deg, rgb(0,0,0,0) 50%, rgba(0, 0, 0, 0.67));
+        /* linear-gradient(
+            to right, 
+            rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.67) 80%,rgba(0, 0, 0, 0.67) 90%
+          ); */
 	}
 	.navbar-collapse{
 		background-color: rgba(40, 40, 40, 0.67);
