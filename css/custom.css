@@ -62,24 +62,13 @@ a.post-link:focus{
 	color: #A53740;
 }
 .timetable{
-	margin-top:50px;
-	table-layout:fixed;
-	width:100%;
-	padding: auto 0;
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-row-gap: 2em;
 }
 
-.timetable th{
-	text-align:center;
-	vertical-align:top;
-}
-.timetable th{
-	color:#777;
-}
-}.timetable td{
-	text-align:center;
-}
-.timetable td:first-child{
-	color:#777;
+.timetable > img {
+    width: 100%;
 }
 
 .light {
