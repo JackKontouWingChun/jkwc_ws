@@ -142,7 +142,7 @@ published: true
 	var map = L.mapbox.map('map')
 			.setView([51.50840883488733, -0.2691655921130605], 16)
 			.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10'))
-			.scrollZoom.disable();
+	map.scrollZoom.disable();
 
 	var featureLayer = L.mapbox.featureLayer({
 			type: 'FeatureCollection',
