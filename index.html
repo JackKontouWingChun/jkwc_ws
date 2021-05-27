@@ -141,7 +141,9 @@ published: true
 	L.mapbox.accessToken = 'pk.eyJ1Ijoiamt3YyIsImEiOiJja290N2V0djEwOGw2MnBueWg4Z2lpOXN6In0.QxkVfOhs5o_PEKUZWEXNJw';
 	var map = L.mapbox.map('map')
 			.setView([51.50840883488733, -0.2691655921130605], 16)
-			.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10'));
+			.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/dark-v10'))
+			.scrollZoom.disable();
+
 	var featureLayer = L.mapbox.featureLayer({
 			type: 'FeatureCollection',
 			features: [{
@@ -157,5 +159,4 @@ published: true
 			}]
 	})
 	.addTo(map);
-	map.scrollZoom.disable();
 </script>
