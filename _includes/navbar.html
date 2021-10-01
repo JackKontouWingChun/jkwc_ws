@@ -1,43 +1,40 @@
 <!-- Navigation -->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-	<div class="container">
-		<div class="navbar-header">
-			<button id="navbar-branding-bars" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-				<i class="fa fa-bars"></i>
-			</button>
-			<a id="navbar-branding" href="#page-top" data-toggle="collapse" data-target=".navbar-main-collapse">
-				<div class="circular-logo" style="background-image: url('{{ site.baseurl }}/img/jkwckf-logo.png');"></div>
-			</a>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-			<ul class="nav navbar-nav">
-				<li>
-				{% if page.url == '/index.html' %}
-					<a href="#page-top">HOME</a>
-				{% else %}
-					<a href="/">HOME</a>
-				{% endif %}
-				</li>
-				<li>
-					<a class="page-scroll" href="{% if page.url == '/index.html' %}#contact{% else %}{{ '#contact' | prepend: '/' }}{% endif %}">Contact</a>
-				</li>
-				<li {% if page.url == '/posts/index.html' or page.page-type == "post" %}class="active"{% endif %}>
-					<a class="page-scroll" href="{{ site.baseurl }}/posts/index.html">Posts</a>
-				</li>
-				<li {% if page.url == '/showreel/index.html' %}class="active"{% endif %}>
-					<a class="page-scroll" href="{{ site.baseurl }}/showreel/index.html">Showreel</a>
-				</li>
-				<li>
-					<a class="page-scroll" href="{% if page.url == '/index.html' %}#about{% else %}{{ '#about' | prepend: '/' }}{% endif %}">About</a>
-				</li>
-				<li>
-					<a class="page-scroll" href="{% if page.url == '/index.html' %}#findus{% else %}{{ '#findus' | prepend: '/' }}{% endif %}">Location</a>
-				</li>
-			</ul>
-		</div>
-		<!-- /.navbar-collapse -->
+	<div class="navbar-header">
+		<button id="navbar-branding-bars" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+			<i class="fa fa-bars"></i>
+		</button>
+		<a id="navbar-branding" href="#page-top" data-toggle="collapse" data-target=".navbar-main-collapse">
+			<div class="circular-logo" style="background-image: url('{{ site.baseurl }}/img/jkwckf-logo.png');"></div>
+		</a>
 	</div>
-	<!-- /.container -->
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+		<ul class="nav navbar-nav">
+			<li>
+			{% if page.url == '/index.html' %}
+				<a href="#page-top">HOME</a>
+			{% else %}
+				<a href="/">HOME</a>
+			{% endif %}
+			</li>
+			<li>
+				<a class="page-scroll" href="{% if page.url == '/index.html' %}#contact{% else %}{{ '#contact' | prepend: '/' }}{% endif %}">Contact</a>
+			</li>
+			<li {% if page.url == '/posts/index.html' or page.page-type == "post" %}class="active"{% endif %}>
+				<a class="page-scroll" href="{{ site.baseurl }}/posts/index.html">Posts</a>
+			</li>
+			<li {% if page.url == '/showreel/index.html' %}class="active"{% endif %}>
+				<a class="page-scroll" href="{{ site.baseurl }}/showreel/index.html">Showreel</a>
+			</li>
+			<li>
+				<a class="page-scroll" href="{% if page.url == '/index.html' %}#about{% else %}{{ '#about' | prepend: '/' }}{% endif %}">About</a>
+			</li>
+			<li>
+				<a class="page-scroll" href="{% if page.url == '/index.html' %}#findus{% else %}{{ '#findus' | prepend: '/' }}{% endif %}">Location</a>
+			</li>
+		</ul>
+	</div>
+	<!-- /.navbar-collapse -->
 </nav>
