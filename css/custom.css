@@ -577,7 +577,7 @@ img{
 	background-color: rgba(255, 203, 1, 0.21);
 }
 
-#myCarousel .item { height: 500px; }
+/* #myCarousel .item { height: 500px; } */
 #slide0 {
 	background: url('../img/slide0_medium.jpg');
 }
@@ -613,6 +613,9 @@ img{
 #portfolio_galleries h2{
 	margin-top: 70px;
 }
+
+.carousel-indicators { display: none; }
+
 /* CUSTOM MEDIA QUERIES */
 
 @media (max-width: 767px) {
@@ -644,7 +647,9 @@ img{
 	.navbar-collapse{
 		background-color: rgba(40, 40, 40, 0.67);
 	}
-	#myCarousel .item { height: 310px; }
+	#myCarousel { height: 310px; }
+
+    
 	#slide0 {
 		background: url('../img/slide0_small.jpg') top left no-repeat;
 	}
@@ -668,6 +673,13 @@ img{
 		padding-left: 5px;
 		padding-right: 5px;
 	}
+    .carousel-inner {
+        height: 230px;
+    }
+}
+
+.carousel-inner {
+    height: 760px;
 }
 
 @media (max-width: 767px) and (orientation: landscape){
@@ -686,7 +698,7 @@ img{
 }
 /* Large desktop */
 @media (min-width: 1200px) {
-    #myCarousel .item { height: 500px; }
+    /* #myCarousel .item { height: 500px; } */
 	#slide0 {
 		background: url('../img/slide0_large.jpg') top center no-repeat;
 	}
